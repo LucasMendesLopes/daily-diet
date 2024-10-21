@@ -8,8 +8,9 @@
       "@components": ["./src/components/index.ts"],
       "@screens": ["./src/screens/index.ts"],
       "@storage/*": ["./src/storage/*"],
+      "@types": ["./src/types/index.ts"],
+      "@theme": ["./src/theme/index.ts"],
       "@utils/*": ["./src/utils/*"],
-      "@theme": ["./src/theme/index.ts"]
     } 
   }
 }
