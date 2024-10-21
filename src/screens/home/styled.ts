@@ -74,29 +74,3 @@ export const NewMealTitle = styled.Text`
     font-family: ${theme.FONT_FAMILY.REGULAR};
   `}
 `;
-
-export const NewMealButton = styled.TouchableOpacity.attrs(() => ({
-  activeOpacity: 0.5,
-}))`
-  width: 100%;
-  height: 50px;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_2};
-  border-radius: ${({ theme }) => theme.BORDER.SM}px;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 12px;
-`;
-
-export const NewMealButtonIcon = styled(Plus).attrs(({ theme }) => ({
-  size: 18,
-  color: theme.COLORS.WHITE,
-}))``;
-
-export const NewMealButtonText = styled.Text`
-  ${({ theme }) => css`
-    color: ${theme.COLORS.WHITE};
-    font-size: ${theme.FONT_SIZE.SM}px;
-    font-family: ${theme.FONT_FAMILY.BOLD};
-  `}
-`;

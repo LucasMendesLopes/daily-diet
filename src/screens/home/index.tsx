@@ -1,6 +1,7 @@
 import * as s from "./styled"
 import Logo from "@assets/Logo.png"
 import User from "@assets/user.png"
+import { Button } from "@components"
 
 export function Home() {
     return (
@@ -28,11 +29,10 @@ export function Home() {
                     Refeições
                 </s.NewMealTitle>
 
-                <s.NewMealButton>
-                    <s.NewMealButtonIcon />
-
-                    <s.NewMealButtonText>Nova refeição</s.NewMealButtonText>
-                </s.NewMealButton>
+                <Button
+                    icon="add"
+                    text="Nova refeição"
+                />
             </s.NewMealContainer>
         </s.Container>
     )
