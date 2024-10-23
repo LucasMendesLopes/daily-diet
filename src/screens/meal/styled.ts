@@ -5,13 +5,6 @@ export const Container = styled.View`
   background-color: ${({ theme }) => theme.COLORS.GREEN_LIGHT};
 `;
 
-export const ElementsContainer = styled.View`
-  flex: 1;
-  background-color: ${({ theme }) => theme.COLORS.GRAY_7};
-  border-radius: 20px;
-  padding: 40px 24px;
-`;
-
 export const InfosContainer = styled.View`
   width: 100%;
   gap: 8px;

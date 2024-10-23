@@ -160,6 +160,10 @@ export function Home() {
         navigation.navigate('meal')
     }
 
+    const handleOpenNewMeal = () => {
+        navigation.navigate('newMeal')
+    }
+
     return (
         <s.Container>
             <s.Header>
@@ -188,6 +192,7 @@ export function Home() {
                 <Button
                     icon={Plus}
                     text="Nova refeição"
+                    onPress={handleOpenNewMeal}
                 />
             </s.NewMealContainer>
 

@@ -1,4 +1,4 @@
-import { Button, Chip, Header } from "@components";
+import { Button, Chip, ElementsBaseContainer, Header } from "@components";
 import * as s from "./styled"
 import { PencilSimpleLine, Trash } from "phosphor-react-native";
 
@@ -7,7 +7,7 @@ export function Meal() {
         <s.Container>
             <Header title="Refeição" />
 
-            <s.ElementsContainer>
+            <ElementsBaseContainer>
                 <s.InfosContainer>
                     <s.MealName>
                         Sanduíche
@@ -42,7 +42,7 @@ export function Meal() {
                         icon={Trash}
                     />
                 </s.ButtonsContainer>
-            </s.ElementsContainer>
+            </ElementsBaseContainer>
         </s.Container>
     )
 }
