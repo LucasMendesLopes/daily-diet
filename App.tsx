@@ -1,11 +1,10 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View, StatusBar } from 'react-native';
 import * as SplashScreen from 'expo-splash-screen';
 import { useFonts, Nunito_400Regular, Nunito_700Bold } from '@expo-google-fonts/nunito';
 import { useEffect } from 'react';
 import { ThemeProvider } from 'styled-components/native';
 import { theme } from './src/theme';
-import { Home } from '@screens';
+import { Routes } from 'src/routes';
 
 SplashScreen.preventAutoHideAsync();
 
@@ -28,8 +27,13 @@ export default function App() {
   return (
     <ThemeProvider theme={theme}>
       <View style={styles.container}>
-        <Home />
-        <StatusBar style="auto" />
+        <StatusBar
+          barStyle="dark-content"
+          translucent
+          backgroundColor="transparent"
+        />
+
+        <Routes />
       </View>
     </ThemeProvider>
   );

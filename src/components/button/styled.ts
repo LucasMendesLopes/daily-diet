@@ -1,6 +1,5 @@
 import { TouchableOpacity } from "react-native";
 import styled, { css } from "styled-components/native";
-import { MaterialIcons } from "@expo/vector-icons";
 
 export type ButtonIconTypeStyleProps = "DARK" | "LIGHT";
 
@@ -24,11 +23,6 @@ export const Button = styled(TouchableOpacity).attrs(() => ({
     padding: 16px;
   `}
 `;
-
-export const Icon = styled(MaterialIcons).attrs<Props>(({ theme, type }) => ({
-  size: 18,
-  color: type === "DARK" ? theme.COLORS.WHITE : theme.COLORS.GRAY_1,
-}))``;
 
 export const Text = styled.Text<Props>`
   ${({ theme, type }) => css`

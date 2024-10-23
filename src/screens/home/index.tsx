@@ -2,8 +2,9 @@ import * as s from "./styled"
 import Logo from "@assets/Logo.png"
 import User from "@assets/user.png"
 import { Button, ListHeaderTitle, ListItem } from "@components"
+import { useNavigation } from "@react-navigation/native";
 import { theme } from "@theme";
-import { LineVertical } from "phosphor-react-native";
+import { LineVertical, Plus } from "phosphor-react-native";
 import { SectionList, Text, TouchableOpacity, View } from "react-native"
 
 const dietPlan = [
@@ -152,6 +153,13 @@ const dietPlan = [
 
 
 export function Home() {
+    const navigation = useNavigation()
+
+
+    const handleOpenMeal = () => {
+        navigation.navigate('meal')
+    }
+
     return (
         <s.Container>
             <s.Header>
@@ -178,7 +186,7 @@ export function Home() {
                 </s.NewMealTitle>
 
                 <Button
-                    icon="add"
+                    icon={Plus}
                     text="Nova refeição"
                 />
             </s.NewMealContainer>
@@ -201,7 +209,7 @@ export function Home() {
                 }}
                 renderItem={({ item: meal }) =>
                     <ListItem
-                        onPress={() => alert(`Você clicou na refeição: ${meal.name}`)}
+                        onPress={handleOpenMeal}
                         hour={meal.hour}
                         name={meal.name}
                         isPartOfTheDiet={meal.isPartOfTheDiet}

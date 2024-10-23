@@ -1,22 +1,24 @@
 import { TouchableOpacityProps } from "react-native"
 import * as s from "./styled"
-import { MaterialIcons } from "@expo/vector-icons"
+import { IconProps } from "phosphor-react-native"
+import { theme } from "@theme";
 
 type Props = TouchableOpacityProps & {
-    icon?: keyof typeof MaterialIcons.glyphMap
+    icon?: React.ElementType<IconProps>;
     type?: s.ButtonIconTypeStyleProps
     text: string
 }
 
-export const Button = ({ icon, type = "DARK", text, ...rest }: Props) => {
+export const Button = ({ icon: Icon, type = "DARK", text, ...rest }: Props) => {
     return (
         <s.Button {...rest} type={type}>
-            {icon &&
-                <s.Icon
-                    name={icon}
-                    type={type}
+            {Icon && (
+                <Icon
+                    size={18}
+                    weight="regular"
+                    color={type === "DARK" ? theme.COLORS.WHITE : theme.COLORS.GRAY_1}
                 />
-            }
+            )}
 
             <s.Text type={type}>
                 {text}
